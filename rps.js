@@ -84,8 +84,8 @@ function playGame() {
     computerScore = 0;
     humanScore = 0;
     for (let i = 1; i <= 5; i++) {
-        playRound(getComputerChoice(), getHumanChoice())
         console.log("Round: " + i);
+        playRound(getComputerChoice(), getHumanChoice())
     }
     console.log("Final Score: ");
     console.log("You: " + humanScore + "  //  Computer: " + computerScore);
