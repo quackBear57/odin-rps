@@ -72,13 +72,21 @@ function playRound(computerChoice, humanChoice) {
             console.log("Tie! Scissors v. Scissors");
         }
     }
-    console.log("Current Score:");
+    console.log("Current Score: You: " + humanScore + "  //  Computer: " + computerScore);
+}
+
+function playGame() {
+    computerScore = 0;
+    humanScore = 0;
+    for (let i = 1; i <= 5; i++) {
+        playRound(getComputerChoice(), getHumanChoice())
+        console.log("Round: " + i);
+    }
+    console.log("Final Score: ");
     console.log("You: " + humanScore + "  //  Computer: " + computerScore);
 }
 
-playRound(getComputerChoice(), getHumanChoice());
-
-
+playGame();
 
 // console.log(getComputerChoice());
 // console.log(getHumanChoice());
