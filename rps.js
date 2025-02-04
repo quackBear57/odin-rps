@@ -1,10 +1,12 @@
-console.log('Hello World!');
+// console.log('Hello World!');
 
+// Initialize variables
 let computerChoice = "TBD";
 let humanChoice = "TBD";
 let humanScore = 0;
 let computerScore = 0;
 
+// Random function to get computer choice
 function getComputerChoice() {
     let numberChoice = Math.random() * 3;
     if (numberChoice < 1) {
@@ -17,6 +19,7 @@ function getComputerChoice() {
     return computerChoice;
 }
 
+// function to prompt user for their choice (using 1, 2, or 3)
 function getHumanChoice() {
     let input = parseInt(prompt("Enter 1 for Paper, 2 for Rock, or 3 for Scissors: "));
     // console.log(input);
@@ -32,6 +35,7 @@ function getHumanChoice() {
     return humanChoice;
 }
 
+// Logic for one round
 function playRound(computerChoice, humanChoice) {
     if (computerChoice == "Rock") {
         if (humanChoice == "Rock") {
@@ -75,6 +79,7 @@ function playRound(computerChoice, humanChoice) {
     console.log("Current Score: You: " + humanScore + "  //  Computer: " + computerScore);
 }
 
+// logic for one game consisting of 5 rounds
 function playGame() {
     computerScore = 0;
     humanScore = 0;
@@ -86,7 +91,6 @@ function playGame() {
     console.log("You: " + humanScore + "  //  Computer: " + computerScore);
 }
 
-playGame();
+// call the game
 
-// console.log(getComputerChoice());
-// console.log(getHumanChoice());
+playGame();
